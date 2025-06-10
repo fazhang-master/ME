@@ -144,8 +144,6 @@ system_prompts = [
 # Process each abstract and store the response
 total_rows = len(df)
 for i, row in df.iterrows():
-    # Clear the console at the beginning of each iteration
-    os.system('cls' if os.name == 'nt' else 'clear')
 
     # Since we're only asking one question now, directly get the response for the second (index 0) system prompt
     response = ask_questions(row['Abstract'], [questions[0]], [system_prompts[0]])[0]
