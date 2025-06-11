@@ -157,4 +157,10 @@ generated_ids = [
 ]
 
 response1 = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-display(Markdown(response1))
+try:
+    display(Markdown(response1))
+except NameError:
+    output_md = "总结报告.md"
+    with open(output_md, 'w', encoding='utf-8') as f:
+        f.write(response1)
+    print(f"✅ Markdown文件已保存至: {output_md}")
