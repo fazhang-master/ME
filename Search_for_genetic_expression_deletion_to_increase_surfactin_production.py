@@ -69,7 +69,7 @@ def search_network(graph, keywords, depth=1):
     return graph.subgraph(nodes_of_interest).copy()
 
 # Perform search with a list of keywords
-word_combinations = ["ethanol","increase"]  # Replace with your keywords
+word_combinations = ["surfactin","increase"]  # Replace with your keywords
 filtered_graph = search_network(G, word_combinations)
 
 # Extract node names from the filtered graph
